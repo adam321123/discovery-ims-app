@@ -56,7 +56,7 @@ export const EcommerceMetrics = () => {
 
           <div className="flex items-center gap-1">
             <Badge color="success">
-              +2 Produk
+              +2
             </Badge>
 
             <span className="text-gray-500 text-theme-xs dark:text-gray-400">
@@ -87,7 +87,7 @@ export const EcommerceMetrics = () => {
 
           <div className="flex items-center gap-1">
             <Badge color="success">
-              +600 Pcs
+              +600
             </Badge>
 
             <span className="text-gray-500 text-theme-xs dark:text-gray-400">
