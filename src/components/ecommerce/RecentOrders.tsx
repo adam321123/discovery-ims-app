@@ -14,7 +14,6 @@ import {
   PencilIcon,
   TrashBinIcon,
 } from "../../icons";
-import Checkbox from "../form/input/Checkbox";
 import Badge from "../ui/badge/Badge";
 import Pagination from "./Pagination";
 import Button from "../ui/button/Button";
@@ -89,7 +88,6 @@ const tableData: Product[] = [
 ];
 
 export default function DataTableThree() {
-  const [isChecked, setIsChecked] = useState(false);
   // const rowsPerPage = 5;
   const [rowsPerPage, setRowsPerPage] = useState(5); // Number of rows per page
   const [currentPage, setCurrentPage] = useState(1);
@@ -238,7 +236,6 @@ export default function DataTableThree() {
                 >
                   <div className="flex items-center justify-between cursor-pointer">
                     <div className="flex gap-3">
-                      {/* <Checkbox checked={isChecked} onChange={setIsChecked} /> */}
                       <span className="font-medium text-gray-700 text-theme-xs dark:text-gray-400">
                         Nama Barang
                       </span>

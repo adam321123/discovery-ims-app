@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import Badge from "../ui/badge/Badge";
-import { ArrowDownIcon, ArrowUpIcon, BoxIconLine, GroupIcon } from "@/icons";
-import { Blocks, PackageSearch, Plus, ShoppingCart } from "lucide-react";
+import { ArrowDownIcon } from "@/icons";
+import { Blocks, PackageSearch, ShoppingCart } from "lucide-react";
 
 export const EcommerceMetrics = () => {
   return (
