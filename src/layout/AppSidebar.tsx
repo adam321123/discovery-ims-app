@@ -2,27 +2,20 @@
 import React, { useEffect, useRef, useCallback, useState } from "react";
 import Link from "next/link";
 import { Store, Warehouse } from "lucide-react"
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "../context/SidebarContext";
 import {
-  BoxCubeIcon,
-  CalenderIcon,
-  ChatIcon,
+
   ChevronDownIcon,
-  DocsIcon,
+
   GridIcon,
   HorizontaLDots,
   ListIcon,
-  MailIcon,
-  PageIcon,
-  PieChartIcon,
-  PlugInIcon,
+
   TableIcon,
-  TaskIcon,
+
   UserCircleIcon,
 } from "../icons/index";
-// import SidebarWidget from "./SidebarWidget";
 
 type NavItem = {
   name: string;
@@ -53,19 +46,6 @@ const navItems: NavItem[] = [
       { name: "Data Tables", path: "/data-tables", pro: true },
     ],
   },
-  // {
-  //   icon: <CalenderIcon />,
-  //   name: "Calendar",
-  //   path: "/calendar",
-  // },
-  // {
-  //   name: "Task",
-  //   icon: <TaskIcon />,
-  //   subItems: [
-  //     { name: "List", path: "/task-list", pro: true },
-  //     { name: "Kanban", path: "/task-kanban", pro: true },
-  //   ],
-  // },
   {
     name: "Forms",
     icon: <ListIcon />,
@@ -74,30 +54,6 @@ const navItems: NavItem[] = [
       { name: "Form Layout", path: "/form-layout", pro: true },
     ],
   },
-  // {
-  //   name: "Tables",
-  //   icon: <TableIcon />,
-  //   subItems: [
-  //     { name: "Basic Tables", path: "/basic-tables", pro: false },
-  //     { name: "Data Tables", path: "/data-tables", pro: true },
-  //   ],
-  // },
-  // {
-  //   name: "Pages",
-  //   icon: <PageIcon />,
-  //   subItems: [
-  //     { name: "File Manager", path: "/file-manager", pro: true },
-  //     { name: "Pricing Tables", path: "/pricing-tables", pro: true },
-  //     { name: "Faqs", path: "/faq", pro: true },
-  //     { name: "Blank Page", path: "/blank", pro: true },
-  //     { name: "404 Error", path: "/error-404", pro: true },
-  //     { name: "500 Error", path: "/error-500", pro: true },
-  //     { name: "503 Error", path: "/error-503", pro: true },
-  //     { name: "Coming Soon", path: "/coming-soon", pro: true },
-  //     { name: "Maintenance", path: "/maintenance", pro: true },
-  //     { name: "Success", path: "/success", pro: true },
-  //   ],
-  // },
 ];
 
 const laporanItems: NavItem[] = [
@@ -117,57 +73,6 @@ const settingItems: NavItem[] = [
     name: "Profil Akun",
     path: "/profile",
   },
-  // {
-  //   icon: <PlugInIcon />,
-  //   name: "Authentication",
-  //   subItems: [
-  //     { name: "Sign In", path: "/signin", pro: false },
-  //     { name: "Sign Up", path: "/signup", pro: false },
-  //     { name: "Reset Password", path: "/reset-password", pro: true },
-  //     {
-  //       name: "Two Step Verification",
-  //       path: "/two-step-verification",
-  //       pro: true,
-  //     },
-  //   ],
-  // },
-  // {
-  //   icon: <PieChartIcon />,
-  //   name: "Charts",
-  //   subItems: [
-  //     { name: "Line Chart", path: "/line-chart", pro: true },
-  //     { name: "Bar Chart", path: "/bar-chart", pro: true },
-  //     { name: "Pie Chart", path: "/pie-chart", pro: true },
-  //   ],
-  // },
-  // {
-  //   icon: <BoxCubeIcon />,
-  //   name: "UI Elements",
-  //   subItems: [
-  //     { name: "Alerts", path: "/alerts", pro: true },
-  //     { name: "Avatar", path: "/avatars", pro: true },
-  //     { name: "Badge", path: "/badge", pro: true },
-  //     { name: "Breadcrumb", path: "/breadcrumb", pro: true },
-  //     { name: "Buttons", path: "/buttons", pro: true },
-  //     { name: "Buttons Group", path: "/buttons-group", pro: true },
-  //     { name: "Cards", path: "/cards", pro: true },
-  //     { name: "Carousel", path: "/carousel", pro: true },
-  //     { name: "Dropdowns", path: "/dropdowns", pro: true },
-  //     { name: "Images", path: "/images", pro: true },
-  //     { name: "Links", path: "/links", pro: true },
-  //     { name: "List", path: "/list", pro: true },
-  //     { name: "Modals", path: "/modals", pro: true },
-  //     { name: "Notification", path: "/notifications", pro: true },
-  //     { name: "Pagination", path: "/pagination", pro: true },
-  //     { name: "Popovers", path: "/popovers", pro: true },
-  //     { name: "Progressbar", path: "/progress-bar", pro: true },
-  //     { name: "Ribbons", path: "/ribbons", pro: true },
-  //     { name: "Spinners", path: "/spinners", pro: true },
-  //     { name: "Tabs", path: "/tabs", pro: true },
-  //     { name: "Tooltips", path: "/tooltips", pro: true },
-  //     { name: "Videos", path: "/videos", pro: true },
-  //   ],
-  // },
 ];
 
 const AppSidebar: React.FC = () => {

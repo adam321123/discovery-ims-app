@@ -7,8 +7,6 @@ import {
 } from "../ui/table";
 import Badge from "../ui/badge/Badge";
 import Image from "next/image";
-import { DeleteIcon } from "lucide-react";
-import Button from "../ui/button/Button";
 import { Tooltip } from "../ui/tooltip/Tooltip";
 
 // Define the TypeScript interface for the table rows
