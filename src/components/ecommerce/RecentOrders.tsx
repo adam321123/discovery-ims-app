@@ -335,27 +335,30 @@ export default function DataTableThree() {
                     {item.outStock}
                   </TableCell>
                   <TableCell className="px-4 py-4 font-normal text-gray-800 border border-gray-100 dark:border-white/[0.05] text-theme-sm dark:text-white/90 whitespace-nowrap">
-                    <Tooltip
-                      content={
-                        item.status === "Terkirim"
-                          ? "Barang Sudah Dikirim"
-                          : item.status === "Pending"
-                          ? "Barang Masih di Lantai 2"
-                          : "Barang di Kembalikan"
-                      }>
-                      <Badge
-                        size="sm"
-                        color={
+                    <div className="cursor-pointer focus:outline-none">
+                      <Tooltip
+                        content={
                           item.status === "Terkirim"
-                            ? "success"
+                            ? "Barang Sudah Dikirim"
                             : item.status === "Pending"
-                            ? "warning"
-                            : "error"
-                        }
-                      >
-                        {item.status}
-                      </Badge>
-                    </Tooltip>
+                            ? "Barang Masih di Lantai 2"
+                            : "Barang di Kembalikan"
+                        }>
+                        <Badge
+                          size="sm"
+                          color={
+                            item.status === "Terkirim"
+                              ? "success"
+                              : item.status === "Pending"
+                              ? "warning"
+                              : "error"
+                          }
+                        >
+                          {item.status}
+                        </Badge>
+                      </Tooltip>
+                    </div>
+                    
                   </TableCell>
                   <TableCell className="px-4 py-4 font-normal text-gray-800 border border-gray-100 dark:border-white/[0.05] text-theme-sm dark:text-white/90 whitespace-nowrap">
                     <div className="flex items-center w-full gap-2">
